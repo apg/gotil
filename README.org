@@ -1,0 +1,19 @@
+#+Title: Gotil: Some utilities extracted from combosaurus
+
+* Overview
+
+This repo just extends the life of some utilities written for the Go services in Combosaurus, written in 2012.
+
+* hash.go
+
+Implements a standard power of 2 hashtable with quadratic probing. This performed incredibly well in my benchmarking
+compared to the maps in Go as of 1.0.
+
+The hash table supports a constant time Clear operation that doesn't reallocate any memory.
+
+* pool.go
+
+Generic resource pool which was utilized to reduce memory allocations of fairly large objects, including the
+above hash table. 
+
+
